@@ -1,7 +1,6 @@
 [gd_scene load_steps=88 format=3 uid="uid://d2oepe4gg1mh7"]
 
 [ext_resource type="Texture2D" uid="uid://d0kbahlxf482d" path="res://texture/Without Sword (for gun)/Up/04 Stranded - Pack 4 back up-Idle Up.png" id="1_4flbx"]
-[ext_resource type="Script" uid="uid://bxqkakgfc0k7" path="res://player.gd" id="1_n7ghd"]
 [ext_resource type="Texture2D" uid="uid://0pn7n051p4wd" path="res://texture/Without Sword (for gun)/Down/04 Stranded - Pack 4 back up-Idle Down.png" id="1_onrkg"]
 [ext_resource type="Texture2D" uid="uid://cafxerxwqdnr3" path="res://texture/Without Sword (for gun)/Down/04 Stranded - Pack 4 back up-Move Down.png" id="2_hqtel"]
 [ext_resource type="Texture2D" uid="uid://bntafojuggskn" path="res://texture/Without Sword (for gun)/Up/04 Stranded - Pack 4 back up-Move Up.png" id="3_i3pqv"]
@@ -11,6 +10,50 @@
 [ext_resource type="Texture2D" uid="uid://3245lb6srbe0" path="res://texture/Without Sword (for gun)/left right/R Run.png" id="6_dw050"]
 [ext_resource type="Texture2D" uid="uid://clrn2ga1px0df" path="res://texture/Without Sword (for gun)/shadow.png" id="9_b26j0"]
 [ext_resource type="PackedScene" uid="uid://bxhrlvqufeuig" path="res://Weapon.tscn" id="11_nvl01"]
+
+[sub_resource type="GDScript" id="GDScript_n7ghd"]
+script/source = "extends CharacterBody2D
+class_name player
+var speed=50 #基础速度
+@onready var animate=$body/AnimatedSprite2D
+@onready var body=$body
+@onready var weapon=$body/WeaponNode
+var _current_animate='down_'
+func _ready():
+	add_to_group(\"player\")
+	print(\"player注册为：\",self)
+func _physics_process(_delta):
+	var dir=Vector2.ZERO
+	dir.x=Input.get_axis(&\"ui_left\",&\"ui_right\")
+	dir.y=Input.get_axis(&\"ui_up\",&\"ui_down\")
+	velocity=dir.normalized()*speed
+	changeAnimate()
+	move_and_slide()
+#切换动画
+func changeAnimate():
+	if velocity==Vector2.ZERO:
+		animate.play(_current_animate+'idle')
+	else:
+		_current_animate=get_movement_dir()
+		animate.play(_current_animate+'move')
+		body.scale.x=-1 if velocity.x<0 else 1
+	var _position=get_global_mouse_position()
+	weapon.look_at(_position)
+	if _position.x > position.x and body.scale.x !=1: body.scale.x=1
+	elif _position.x < position.x && body.scale.x !=-1: body.scale.x=-1	
+#获取移动时的方向以播放对应的动画，使用''符号进行变量拼接
+func get_movement_dir() -> String:
+	weapon.z_index=1
+	if velocity==Vector2.ZERO:return 'lr_'
+	var angle=velocity.angle()
+	var degree=rad_to_deg(angle)
+	if -45<=degree and degree<45:return'lr_'
+	elif  45<=degree and degree<135:return 'down_'
+	elif  -135 <=degree and degree <-45:
+		weapon.z_index=0
+		return'up_'
+	return 'lr_'
+"
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sh265"]
 radius = 3.95348
@@ -577,9 +620,11 @@ animations = [{
 "speed": 8.0
 }]
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="CharacterBody2D" type="CharacterBody2D" groups=["player"]]
 z_index = 1
-script = ExtResource("1_n7ghd")
+collision_layer = 2
+collision_mask = 2
+script = SubResource("GDScript_n7ghd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)
@@ -600,7 +645,7 @@ z_index = 1
 position = Vector2(5, 0)
 scale = Vector2(0.405, 0.5)
 sprite_frames = SubResource("SpriteFrames_4flbx")
-animation = &"down_idle"
+animation = &"lr_idle"
 
 [node name="WeaponNode" type="Node2D" parent="body"]
 z_index = 1

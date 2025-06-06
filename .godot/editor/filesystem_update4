@@ -1,0 +1,12 @@
+res://enemy.tscn
+res://enemy.gd
+res://main.tscn
+res://player.tscn
+res://Weapon.tscn
+res://bullet.tscn
+res://ghoul.tscn
+res://player.gd
+res://game.gd
+res://bullet.gd
+res://camera_2d.gd
+res://weapon.gd

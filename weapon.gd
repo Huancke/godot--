@@ -8,5 +8,6 @@ func fire():
 	instance.global_position=bullet_Point.global_position
 	instance.dir=global_position.direction_to(get_global_mouse_position())
 	get_tree().root.add_child(instance)
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("fire"):fire()
+	

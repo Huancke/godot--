@@ -1,9 +1,11 @@
 extends CharacterBody2D
+class_name Player
 var speed=50 #基础速度
 @onready var animate=$body/AnimatedSprite2D
 @onready var body=$body
 @onready var weapon=$body/WeaponNode
 var _current_animate='down_'
+func _ready():print(self)
 func _physics_process(_delta):
 	var dir=Vector2.ZERO
 	dir.x=Input.get_axis(&"ui_left",&"ui_right")

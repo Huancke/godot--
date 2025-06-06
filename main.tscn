@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=4 uid="uid://dwn1qrimcp2yo"]
+[gd_scene load_steps=11 format=4 uid="uid://dwn1qrimcp2yo"]
 
 [ext_resource type="Texture2D" uid="uid://btjht08xbphf5" path="res://texture/Spitter/Projectile/Tileset.png" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://d2oepe4gg1mh7" path="res://player.tscn" id="2_0xm2m"]
 [ext_resource type="Script" uid="uid://co0hybthr75hq" path="res://camera_2d.gd" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://crq818244suxq" path="res://ghoul.tscn" id="4_1bvp3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0xm2m"]
 texture = ExtResource("1_ig7tw")
@@ -593,7 +594,7 @@ shape = SubResource("RectangleShape2D_1bvp3")
 position = Vector2(184, 95)
 shape = SubResource("RectangleShape2D_1bvp3")
 
-[node name="Player" parent="." instance=ExtResource("2_0xm2m")]
+[node name="Player" parent="." groups=["player"] instance=ExtResource("2_0xm2m")]
 position = Vector2(286, 129)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
@@ -607,3 +608,6 @@ limit_right = 704
 limit_bottom = 366
 position_smoothing_enabled = true
 script = ExtResource("3_h2yge")
+
+[node name="enemyTest" parent="." instance=ExtResource("4_1bvp3")]
+position = Vector2(263, 139)
