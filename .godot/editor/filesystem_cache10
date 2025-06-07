@@ -1,19 +1,19 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1749173522
-bullet.gd::GDScript/GDScript::3399786143682318222::1748925574::0::1::::bullet<>Node2D<><>0<>0<><>::
-bullet.tscn::PackedScene::6742947904684084957::1749147044::0::1::::<><><>0<>0<><>::uid://boo48mebeqhxe::::res://bullet.gd<>uid://dc7y6jsjmkvh4::::res://texture/bullet.png
-camera_2d.gd::GDScript/GDScript::5807562582389925030::1748834685::0::1::::<>Camera2D<><>0<>0<><>::
-enemy.gd::GDScript::8305204849545305674::1749147419::0::1::::enemy<>CharacterBody2D<><>0<>0<><>::
-enemy.tscn::PackedScene::4846064951514694206::1749147421::0::1::::<><><>0<>0<><>::uid://dqldrmdmvgesw::::res://enemy.gd<>uid://clrn2ga1px0df::::res://texture/Without Sword (for gun)/shadow.png
-game.gd::GDScript::5378968912670385108::1749145645::0::1::::<>Node<><>0<>0<><>::
-ghoul.tscn::PackedScene::6001133621037916078::1749147044::0::1::::<><><>0<>0<><>::uid://cbbp8m5aqij4a::::res://enemy.tscn<>uid://b11cak1c0fjcw::::res://texture/Ghoul/static idle.png<>uid://clci8750mx755::::res://texture/Ghoul/Ghoul Sprite Sheet 62 x 33.png
+::res://::1749261977
+bullet.gd::GDScript/GDScript::3399786143682318222::1749197346::0::1::::bullet<>Node2D<><>0<>0<><>::
+bullet.tscn::PackedScene::6742947904684084957::1749221090::0::1::::<><><>0<>0<><>::uid://boo48mebeqhxe::::res://bullet.gd<>uid://dc7y6jsjmkvh4::::res://texture/bullet.png
+camera_2d.gd::GDScript/GDScript::5807562582389925030::1749197346::0::1::::<>Camera2D<><>0<>0<><>::
+enemy.gd::GDScript::8305204849545305674::1749221090::0::1::::enemy<>CharacterBody2D<><>0<>0<><>::
+enemy.tscn::PackedScene::4846064951514694206::1749221090::0::1::::<><><>0<>0<><>::uid://dqldrmdmvgesw::::res://enemy.gd<>uid://clrn2ga1px0df::::res://texture/Without Sword (for gun)/shadow.png
+game.gd::GDScript/GDScript::5378968912670385108::1749201940::0::1::::<>Node<><>0<>0<><>::
+ghoul.tscn::PackedScene::6001133621037916078::1749221433::0::1::::<><><>0<>0<><>::uid://cbbp8m5aqij4a::::res://enemy.tscn<>uid://b11cak1c0fjcw::::res://texture/Ghoul/static idle.png<>uid://clci8750mx755::::res://texture/Ghoul/Ghoul Sprite Sheet 62 x 33.png
 icon.svg::CompressedTexture2D/CompressedTexture2D::2374437750254686482::1748678234::1748678240::1::::<><><>0<>0<>48f42432813696cdc059d5942843fd79<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-main.tscn::PackedScene::8731861642237106242::1749147043::0::1::::<><><>0<>0<><>::uid://btjht08xbphf5::::res://texture/Spitter/Projectile/Tileset.png<>uid://d2oepe4gg1mh7::::res://player.tscn<>uid://co0hybthr75hq::::res://camera_2d.gd<>uid://crq818244suxq::::res://ghoul.tscn
-player.gd::GDScript::118658877532165880::1749145699::0::1::::Player<>CharacterBody2D<><>0<>0<><>::
-player.tscn::PackedScene::9083532027917048942::1749147044::0::1::::<><><>0<>0<><>::uid://d0kbahlxf482d::::res://texture/Without Sword (for gun)/Up/04 Stranded - Pack 4 back up-Idle Up.png<>uid://0pn7n051p4wd::::res://texture/Without Sword (for gun)/Down/04 Stranded - Pack 4 back up-Idle Down.png<>uid://cafxerxwqdnr3::::res://texture/Without Sword (for gun)/Down/04 Stranded - Pack 4 back up-Move Down.png<>uid://bntafojuggskn::::res://texture/Without Sword (for gun)/Up/04 Stranded - Pack 4 back up-Move Up.png<>uid://qchqq41s6auu::::res://texture/Without Sword (for gun)/left right/R.png<>uid://dafmnb68etdcu::::res://texture/Without Sword (for gun)/left right/R move.png<>uid://jfhgwwaafyfs::::res://texture/Without Sword (for gun)/left right/R Roll.png<>uid://3245lb6srbe0::::res://texture/Without Sword (for gun)/left right/R Run.png<>uid://clrn2ga1px0df::::res://texture/Without Sword (for gun)/shadow.png<>uid://bxhrlvqufeuig::::res://Weapon.tscn
+main.tscn::PackedScene::8731861642237106242::1749221090::0::1::::<><><>0<>0<><>::uid://btjht08xbphf5::::res://texture/Spitter/Projectile/Tileset.png<>uid://d2oepe4gg1mh7::::res://player.tscn<>uid://co0hybthr75hq::::res://camera_2d.gd<>uid://crq818244suxq::::res://ghoul.tscn
+player.gd::GDScript/GDScript::118658877532165880::1749201940::0::1::::Player<>CharacterBody2D<><>0<>0<><>::
+player.tscn::PackedScene::9083532027917048942::1749221090::0::1::::<><><>0<>0<><>::uid://d0kbahlxf482d::::res://texture/Without Sword (for gun)/Up/04 Stranded - Pack 4 back up-Idle Up.png<>uid://0pn7n051p4wd::::res://texture/Without Sword (for gun)/Down/04 Stranded - Pack 4 back up-Idle Down.png<>uid://cafxerxwqdnr3::::res://texture/Without Sword (for gun)/Down/04 Stranded - Pack 4 back up-Move Down.png<>uid://bntafojuggskn::::res://texture/Without Sword (for gun)/Up/04 Stranded - Pack 4 back up-Move Up.png<>uid://qchqq41s6auu::::res://texture/Without Sword (for gun)/left right/R.png<>uid://dafmnb68etdcu::::res://texture/Without Sword (for gun)/left right/R move.png<>uid://jfhgwwaafyfs::::res://texture/Without Sword (for gun)/left right/R Roll.png<>uid://3245lb6srbe0::::res://texture/Without Sword (for gun)/left right/R Run.png<>uid://clrn2ga1px0df::::res://texture/Without Sword (for gun)/shadow.png<>uid://bxhrlvqufeuig::::res://Weapon.tscn
 playerData.gd::GDScript/GDScript::6485525078300101633::1749141648::0::1::::<>Node<><>0<>0<><>::
-weapon.gd::GDScript/GDScript::9218402364644412864::1749050753::0::1::::weapon<>Node2D<><>0<>0<><>::
-Weapon.tscn::PackedScene::4016267692879042518::1749147044::0::1::::<><><>0<>0<><>::uid://rsfj2l2m4kxo::::res://texture/Guns/gun1.png<>uid://d4lp0ftxlqnuu::::res://weapon.gd
+weapon.gd::GDScript/GDScript::9218402364644412864::1749211100::0::1::::weapon<>Node2D<><>0<>0<><>::
+Weapon.tscn::PackedScene::4016267692879042518::1749221090::0::1::::<><><>0<>0<><>::uid://rsfj2l2m4kxo::::res://texture/Guns/gun1.png<>uid://d4lp0ftxlqnuu::::res://weapon.gd
 ::res://addons/::1748836471
 ::res://addons/AsepriteWizard/::1748756007
 plugin.cfg::TextFile/TextFile::-1::1748756007::0::1::::<><><>0<>0<><>::
@@ -130,7 +130,7 @@ README.md::TextFile/TextFile::-1::1748756395::0::1::::<><><>0<>0<><>::
 terminal.gd::GDScript/GDScript::2904285242122824063::1748756067::0::1::::<>EditorPlugin<><>0<>1<><>::
 ::res://addons/gdterm/audio/::1748756069
 bell.mp3::AudioStreamMP3/AudioStreamMP3::8777280781093158462::1748756067::1748756069::1::::<><><>0<>0<>8ed130fa64ee24b20b8844e1410655e2<>res://.godot/imported/bell.mp3-d733e55e5e7187f12f2c88c5e76955d9.mp3str::
-::res://addons/gdterm/bin/::1749173516
+::res://addons/gdterm/bin/::1749261972
 gdterm.gdextension::GDExtension/GDExtension::1306251815587343623::1748756067::0::1::::<><><>0<>0<><>::
 ::res://addons/gdterm/bin/libgdterm.macos.template_debug.framework/::1748756067
 ::res://addons/gdterm/bin/libgdterm.macos.template_release.framework/::1748756067

@@ -390,6 +390,7 @@ tile_set = SubResource("TileSet_0xm2m")
 metadata/_edit_lock_ = true
 
 [node name="石头碰撞体" type="StaticBody2D" parent="TileSet_png/地板装饰"]
+collision_mask = 6
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TileSet_png/地板装饰/石头碰撞体"]
@@ -568,6 +569,7 @@ scale = Vector2(1.07112, 0.735151)
 shape = SubResource("RectangleShape2D_h2yge")
 
 [node name="树杆碰撞体" type="StaticBody2D" parent="TileSet_png/地板装饰"]
+collision_mask = 6
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TileSet_png/地板装饰/树杆碰撞体"]
@@ -594,7 +596,7 @@ shape = SubResource("RectangleShape2D_1bvp3")
 position = Vector2(184, 95)
 shape = SubResource("RectangleShape2D_1bvp3")
 
-[node name="Player" parent="." groups=["player"] instance=ExtResource("2_0xm2m")]
+[node name="Player" parent="." instance=ExtResource("2_0xm2m")]
 position = Vector2(286, 129)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]

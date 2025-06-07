@@ -224,6 +224,7 @@ animations = [{
 }]
 
 [node name="enemy" instance=ExtResource("1_a2moo")]
+collision_mask = 3
 
 [node name="CollisionShape2D" parent="." index="0"]
 position = Vector2(0, -3)
@@ -238,16 +239,14 @@ scale = Vector2(0.3, 0.372)
 sprite_frames = SubResource("SpriteFrames_a2moo")
 animation = &"atk"
 autoplay = "idle"
+frame_progress = 0.777809
 
 [node name="Area2D" parent="." index="3"]
 collision_layer = 4
 collision_mask = 2
 
 [node name="CollisionShape2D" parent="Area2D" index="0"]
-position = Vector2(0, -2)
-scale = Vector2(0.807882, 0.194521)
+position = Vector2(0, -3)
+scale = Vector2(0.71216, -0.421399)
 
-[connection signal="animation_finished" from="body/AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
-[connection signal="frame_changed" from="body/AnimatedSprite2D" to="." method="_on_animated_sprite_2d_frame_changed"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
